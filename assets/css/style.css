@@ -1,0 +1,10 @@
+p {
+  color: red;
+}
+
+body {
+  background-color: black;
+  color: white;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+}
