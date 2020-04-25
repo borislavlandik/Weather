@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Погода в Иркутске</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Погода</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
-    <p id="weather">some text</p>
+    <div class="container">
+        <div class="header">
+            <input id="inp-search" type="text" placeholder="Введите название города">
+            <button id="btn-search">Поиск</button>
+            <button id="btn-use-location">Л</button>
+        </div>
+
+        <div class="info">
+            <h2 id="country"></h2>
+            <h2 id="city"></h2>
+            <h2 id="temperature"></h2>
+            <h2 id="pressure"></h2>
+            <h2 id="humidity"></h2>
+        </div>
+    </div>  
 
     <script src="/assets/js/main.js"></script>
 </body>
