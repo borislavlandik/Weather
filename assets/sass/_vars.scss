@@ -1,2 +1,27 @@
-$primary-color: #2460bb;
-$secondary-color: #1ac3c9;
+/* Boolean */
+$isLightTheme: false !default;
+
+/* Neutral Colors */
+//@if $isLightTheme {
+    $black: #252525;
+    $dark-gray: #7e7e7e;
+    $light-gray: #d2d2d2;
+    $white: #ffffff;
+// }
+// @else {
+//     $black: #ffffff;
+//     $dark-gray: #d2d2d2;
+//     $light-gray: #7e7e7e;
+//     $white: #252525;
+// }
+
+/* Additional Colors */
+$error-color: #cf1313;
+$success-color: #0053ee;
+ 
+/* Font Family */
+$main-family: "Montserrat", sans-serif;
+
+/* Font Sizes */
+$h2-size: 24px;
+$text-size: 16px;

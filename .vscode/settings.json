@@ -14,5 +14,15 @@
     "liveSassCompile.settings.autoprefix": [ 
         "last 5 versions" 
     ],
-    "liveSassCompile.settings.showOutputWindow": false
+    "liveSassCompile.settings.showOutputWindow": false,
+    "cSpell.ignoreWords": [
+        "cdnjs"
+    ],
+    "eslint.options": {
+
+        "configFile": "D:/Projects/WebWeatherApp/.vscode/.eslintrc.json"
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true,
+    "eslint.format.enable": true
 }

@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import "reset";
+@import "vars";
 
-/* Reset CSS and basic styles */
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Basic styles */
 
 body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-family: $main-family;
+    font-size: $text-size;
 }
 
-@import "vars";
-@import "inputs";
+@import "main";
+@import "background-video";
+@import "search";
+@import "loading";
+@import "button";
+@import "side-menu";
+@import "menu-elements";
+@import "content";

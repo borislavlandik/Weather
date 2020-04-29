@@ -1,0 +1,14 @@
+.background {
+    position: relative;
+    z-index: 1;
+    // padding-bottom: 56.25%;
+    
+    &__media {
+        width: 100%;
+        height: auto;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

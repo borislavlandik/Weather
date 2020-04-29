@@ -1,0 +1,55 @@
+.menu-element {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $light-gray;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &__header {
+        margin-bottom: 12px;
+        font-size: $h2-size;
+        font-weight: 600;
+
+        color: $black;
+    }
+
+    &__subheader {
+        font-size: $text-size;
+
+        color: $dark-gray;
+    }
+}
+
+.location {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__text {
+        color: $dark-gray;
+    }
+
+    &__value {
+        font-weight: 600;
+
+        color: $black;
+    }
+}
+
+.chart-temperature {
+    width: 100%;
+    height: 200px;
+}

@@ -1,0 +1,75 @@
+.button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.btn-menu {
+    width: 10px;
+    height: 100px;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    border-radius: 50% / 5%;
+    
+    background-color: transparentize($color: $white, $amount: 0.5);
+
+    transition: right .7s ease-in-out;
+}
+
+.btn-close-search, .btn-location {
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 30px;
+
+    border: 2px solid $black;
+    border-radius: 50%;
+
+    color: $black;
+
+    transition: border-color .2s linear, 
+                color .2s linear;
+}
+
+.btn-close-search {
+    right: 30px;
+
+    &:hover {
+        border-color: $error-color;
+        color: $error-color;
+    }
+}
+
+.btn-location {
+    left: 30px;
+
+    &:hover {
+        border-color: $success-color;
+        color: $success-color;
+    }
+}
+
+.btn-search {
+    font-size: 20px;
+    color: $dark-gray;
+
+    transition: color .2s linear;
+}
+
+.btn-update {
+    font-size: 20px;
+    color: $white;
+
+    transform: rotate(0);
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
