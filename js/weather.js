@@ -24,7 +24,7 @@ export async function getCurrentWeatherByCoordinates()
 {
     let coordinates = await getCoordinates();
 
-    const url = new URL("http://api.openweathermap.org/data/2.5/weather");
+    const url = new URL("https://api.openweathermap.org/data/2.5/weather");
     let params = {
         appid: "321ac0bbf2380bbabc93a0aa768d1e89",
         units: "metric",
@@ -56,7 +56,7 @@ export async function getCurrentWeatherByCoordinates()
 
 export async function getCurrentWeatherByCityName(city)
 {
-    const url = new URL("http://api.openweathermap.org/data/2.5/weather");
+    const url = new URL("https://api.openweathermap.org/data/2.5/weather");
     let params = {
         appid: "321ac0bbf2380bbabc93a0aa768d1e89",
         units: "metric",
@@ -85,7 +85,7 @@ export async function getCurrentWeatherByCityName(city)
 
 export async function getForecast(city)
 {
-    const url = new URL("http://api.openweathermap.org/data/2.5/forecast");
+    const url = new URL("https://api.openweathermap.org/data/2.5/forecast");
     let params = {
         appid: "321ac0bbf2380bbabc93a0aa768d1e89",
         units: "metric",
