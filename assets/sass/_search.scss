@@ -32,11 +32,12 @@
 
 .inp-city {
     width: 250px;
+    padding-bottom: 5px;
+
     background-color: transparent;
     border: none;
-    outline: none;
-
     border-bottom: 2px solid $black;
+    outline: none;
 
     text-align: center;
     font-family: $main-family;

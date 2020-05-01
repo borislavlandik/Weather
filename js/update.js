@@ -36,6 +36,10 @@ export async function update(weather)
     $(".value-city").html(weather.name);
     $(".value-country").html(countries[weather.sys.country]);
 
+    $(".value-temp-feels").html(`${weather.main.feels_like}°`);
+    $(".value-temp-min").html(`${weather.main.temp_min}°`);
+    $(".value-temp-max").html(`${weather.main.temp_max}°`);
+
     let condition = getWeatherCondition(weather.weather[0].id);
 
     $(".value-description").html(`${condition.description}`);
