@@ -1,5 +1,6 @@
-import {getCurrentWeatherByCityName, getCurrentWeatherByCoordinates} from "./weather.js";
-import {update, updateLocalStorage} from "./update.js";
+import {getCurrentWeatherByCityName, getCurrentWeatherByCoordinates, getForecast} from "./weather.js";
+import {update, updateLocalStorage, updateChart} from "./update.js";
+
 
 export function initEvents()
 {
@@ -52,7 +53,10 @@ function loadWeather()
         $(".progress__value").animate({width: "100%"}, 1250, "swing", () => {
             $(".loading").fadeToggle(() => {
                 $(".progress__value").css("width", 0);
-                $(".background__video").get(0).play();
+                
+                const video = $(".background__video").get(0);
+                video.currentTime = 0;
+                video.play();
             });
         });
     });
@@ -64,6 +68,7 @@ export async function checkWeather(weatherJson) {
     else
     {
         update(weatherJson);
+        updateChart(await getForecast(weatherJson.name));
         loadWeather();
     } 
 }

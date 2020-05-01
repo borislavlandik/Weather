@@ -26,12 +26,12 @@ export async function getCurrentWeatherByCoordinates()
 
     const url = new URL("http://api.openweathermap.org/data/2.5/weather");
     let params = {
-            appid: "321ac0bbf2380bbabc93a0aa768d1e89",
-            units: "metric",
-            lang: "ru",
-            lat: coordinates.lat,
-            lon: coordinates.lon
-        };
+        appid: "321ac0bbf2380bbabc93a0aa768d1e89",
+        units: "metric",
+        lang: "ru",
+        lat: coordinates.lat,
+        lon: coordinates.lon
+    };
 
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
 
@@ -58,11 +58,40 @@ export async function getCurrentWeatherByCityName(city)
 {
     const url = new URL("http://api.openweathermap.org/data/2.5/weather");
     let params = {
-            appid: "321ac0bbf2380bbabc93a0aa768d1e89",
-            units: "metric",
-            lang: "ru",
-            q: city
-        };
+        appid: "321ac0bbf2380bbabc93a0aa768d1e89",
+        units: "metric",
+        lang: "ru",
+        q: city
+    };
+
+    Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+
+    let json = {};
+
+    await fetch(url)
+        .then((response) => {
+            if(response.ok)
+                return response.json();
+            else 
+                return Promise.reject(response);
+        })
+        .then((data) => json = data)
+        .catch(() => {
+            json = null;
+        });
+
+    return json;
+}
+
+export async function getForecast(city)
+{
+    const url = new URL("http://api.openweathermap.org/data/2.5/forecast");
+    let params = {
+        appid: "321ac0bbf2380bbabc93a0aa768d1e89",
+        units: "metric",
+        lang: "ru",
+        q: city
+    };
 
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
 

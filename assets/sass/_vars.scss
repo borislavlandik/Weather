@@ -2,18 +2,10 @@
 $isLightTheme: false !default;
 
 /* Neutral Colors */
-//@if $isLightTheme {
-    $black: #252525;
-    $dark-gray: #7e7e7e;
-    $light-gray: #d2d2d2;
-    $white: #ffffff;
-// }
-// @else {
-//     $black: #ffffff;
-//     $dark-gray: #d2d2d2;
-//     $light-gray: #7e7e7e;
-//     $white: #252525;
-// }
+$black: #252525;
+$dark-gray: #7e7e7e;
+$light-gray: #d2d2d2;
+$white: #ffffff;
 
 /* Additional Colors */
 $error-color: #cf1313;

@@ -1,6 +1,6 @@
 import {initEvents} from "./events.js";
-import {update} from "./update.js";
-import {getCurrentWeatherByCityName} from "./weather.js";
+import {update, updateChart} from "./update.js";
+import {getCurrentWeatherByCityName, getForecast} from "./weather.js";
 
 (async () => {
     let city = localStorage.getItem("city");
@@ -23,11 +23,14 @@ import {getCurrentWeatherByCityName} from "./weather.js";
     else
     {
         update(await getCurrentWeatherByCityName(city));
+        updateChart(await getForecast(city));
 
         $(".progress__value").animate({width: "100%"}, 1250, "swing", () => {
             $(".loading").fadeToggle(() => {
                 $(".progress__value").css("width", 0);
-                $(".background__video").get(0).play();
+                const video = $(".background__video").get(0);
+                video.currentTime = 0;
+                video.play();
             });
         });
     }

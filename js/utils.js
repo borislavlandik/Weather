@@ -38,7 +38,8 @@ export function getWeatherCondition(id)
 {
     let condition = {
         description: "",
-        advice: ""
+        advice: "",
+        video: ""
     };
 
     switch(id)
@@ -51,6 +52,7 @@ export function getWeatherCondition(id)
         {
             condition.description = "На улице гроза";
             condition.advice = "Опасайтесь одиночных деревьев";
+            condition.video = "/assets/videos/Thunderstorm.mp4";
             break;
         }
         case 300: case 301:
@@ -61,6 +63,7 @@ export function getWeatherCondition(id)
         {
             condition.description = "На улице небольшой дождь";
             condition.advice = "Не забудьте взять зонт";
+            condition.video = "/assets/videos/Rain.mp4";
             break;
         }
         case 500: case 501:
@@ -71,6 +74,7 @@ export function getWeatherCondition(id)
         {
             condition.description = "На улице идет дождь";
             condition.advice = "Не забудьте взять зонт";
+            condition.video = "/assets/videos/Rain.mp4";
             break;
         }
         case 600: case 601:
@@ -82,6 +86,7 @@ export function getWeatherCondition(id)
         {
             condition.description = "На улице идет снег";
             condition.advice = "Одевайтесь потеплее";
+            condition.video = "/assets/videos/Snow.mp4";
             break;
         }
         case 700: case 711:
@@ -92,12 +97,14 @@ export function getWeatherCondition(id)
         {
             condition.description = "Пониженная видимость";
             condition.advice = "Будьте осторожны на дорогах";
+            condition.video = "/assets/videos/Mist.mp4";
             break;
         }
         case 800:
         {
             condition.description = "На улице ясно";
             condition.advice = "Прекрасное время сходить на прогулку";
+            condition.video = "/assets/videos/Night Sky.mp4";
             break;
         }
         case 801: case 802:
@@ -105,6 +112,7 @@ export function getWeatherCondition(id)
         {
             condition.description = "На улице облачно";
             condition.advice = "Прекрасное время отдохнуть";
+            condition.video = "/assets/videos/Clouds.mp4";
             break;
         }
     }
