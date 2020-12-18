@@ -81,7 +81,7 @@ export function getWeatherCondition(id)
         case 602: case 611:
         case 612: case 613:
         case 615: case 616:
-        case 520: case 621:
+        case 620: case 621:
         case 622:
         {
             condition.description = "На улице идет снег";
@@ -89,7 +89,7 @@ export function getWeatherCondition(id)
             condition.video = "assets/videos/Snow.mp4";
             break;
         }
-        case 700: case 711:
+        case 701: case 711:
         case 721: case 731:
         case 741: case 751:
         case 761: case 762:
